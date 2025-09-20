@@ -117,3 +117,13 @@ function scrollNav(){
         })
     })
 }
+
+// Cambiar de export ES6 a module.exports CommonJS
+module.exports = { 
+    crearGaleria, 
+    mostrarImagen, 
+    ocultarImagen, 
+    navegacionFija, 
+    resaltarSeccion, 
+    scrollNav 
+};
