@@ -10,7 +10,19 @@ on:
             - main
 
 jobs:
+
+    Test:
+        runs-on: ubuntu-latest
+        steps:
+
+            - uses: actions/checkout@v4
+
+            - uses: actions/setup-node@v4
+
+            - run: npm run test
+
     Deploy-Production:
+        needs: [Test]
         runs-on: ubuntu-latest
         steps:
 
